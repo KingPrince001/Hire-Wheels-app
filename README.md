@@ -235,31 +235,32 @@ Relationships:
 
 
 ## Folder Structure.
-
+```java
 .
-├── backend
-│   ├── controllers
-│   ├── models
-│   ├── routes
-│   └── server.js
-├── frontend
-│   ├── public
-│   ├── src
-│   │   ├── components
-│   │   │   ├── common
-│   │   │   ├── layout
-│   │   │   └── ui
-│   │   ├── pages
-│   │   ├── services
-│   │   ├── styles
-│   │   └── index.js
-│   ├── package.json
-│   └── .env
-├── database
-│   ├── migrations
-│   └── seeds
-├── README.md
-└── .gitignore
+├── backend  
+│   ├── controllers  
+│   ├── models  
+│   ├── routes  
+│   └── server.js  
+├── frontend  
+│   ├── public  
+│   ├── src  
+│   │   ├── components  
+│   │   │   ├── common  
+│   │   │   ├── layout  
+│   │   │   └── ui  
+│   │   ├── pages  
+│   │   ├── services  
+│   │   ├── styles  
+│   │   └── index.js  
+│   ├── package.json  
+│   └── .env  
+├── database  
+│   ├── migrations  
+│   └── seeds  
+├── README.md  
+└── .gitignore  
+```
 
 ### Explanation of the folder structure.
 
