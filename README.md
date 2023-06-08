@@ -223,7 +223,7 @@ The car hire website uses a SQL database to store various information. Below are
 | car_id       | INT      | Foreign key referencing Car Table         |
 | customer_id  | INT      | Foreign key referencing Customer Table    |
 | rating       | INT      | Rating given by the customer (e.g., 1-5)  |
-| comment      | TEXT     | Customer's review or comments             |
+| comment      | VARCHAR     | Customer's review or comments             |
 | date         | DATE     | Date of the review submission             |
 
 **Primary Key:** review_id
@@ -233,7 +233,24 @@ Relationships:
 - One car can have multiple ratings and reviews (one-to-many relationship between Car and Ratings/Reviews).
 - One customer can provide multiple ratings and reviews (one-to-many relationship between Customer and Ratings/Reviews).
 
+### Booking Management Table
 
+| Column           | Type      | Description                                       |
+| ---------------- | --------- | ------------------------------------------------- |
+| booking_id       | INT       | Unique booking identifier                          |
+| user_id          | INT       | Foreign key referencing User Table                 |
+| car_id           | INT       | Foreign key referencing Car Table                  |
+| start_date       | DATE      | Start date of the booking                          |
+| end_date         | DATE      | End date of the booking                            |
+| number_of_days   | INT       | Number of days for the booking                     |
+| total_cost       | DECIMAL   | Total cost of the booking                          |
+| status           | VARCHAR   | Status of the booking (Pending, Approved,canceled)    |
+| actions          | VARCHAR   | Actions available for the booking ( View, Modify, Cancel) |
+**Primary Key:** booking_id
+**Foreign Keys:** user_id (References User Table), car_id (References Car Table)
+
+### Relationships:
+- One user can have multiple bookings (one-to-many relationship between User and Booking)
 ## Folder Structure.
 ```java
 .
